@@ -11,6 +11,39 @@
  ```
 
 ```swift
+    var overallDecimalTime:Double = Double(18.0 + (17.0/60.0) + (0.0/3600.0))    //princes time of birth 18:17:00
+    //39º7'19"      //LAT   //according to famous people database
+    //97º42'19"     //LONG  //according to famous people database
+    
+    //1958-06-07 Princes birthday born in 55404ish 18:17:00 oclock
+    var overallTheYear:DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        formatter.timeZone = TimeZone.current
+        formatter.date(from: "1958")
+        return formatter
+    }()
+    
+    var overallTheMonth:DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM"
+        formatter.timeZone = TimeZone.current
+        formatter.date(from: "06")
+        return formatter
+    }()
+    
+    var overallTheDay:DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd"
+        formatter.timeZone = TimeZone.current
+        formatter.date(from: "07")
+        return formatter
+    }()
+    
+    var tjd_ut:Double = Double()        //julian to gregorian swissephVar
+    var iflag = SEFLG_SPEED //turn off truepos so apparent geocentric now
+    var fixstar:Int32 = Int32()
+    
     deinit {
         // perform the deinitialization
         self.swissephClose()
@@ -18,6 +51,8 @@
 ```
 
 ```swift
+        //in viewDidLoad or something
+
         var theYear:NSNumber
         var theMonth:NSNumber
         var theDay:NSNumber
