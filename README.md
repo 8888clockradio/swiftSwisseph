@@ -4,7 +4,7 @@
  compile Framework, then include into your project.  
  interact in swift using c data type.  
  
- make sure you satisfy AstroDienst's licensing agenda.  
+ make sure you satisfy AstroDienst's licensing agenda satisfied.  
  
  ```swift
  import swiftSwisseph
@@ -126,4 +126,8 @@
         
         //have to recast the vars
         tjd_ut = swe_julday((theYear as! Int32), (theMonth as! Int32), (theDay as! Int32), (theDecimalHour as! Double), SE_GREG_CAL)   //set tjd_ut = a "Julian" date. SE_GREG_CAL determines its a Gregorian Calendar instead. Have to cast to C data-types. (theYear as! Int32)
+        
+        iflag = SEFLG_SPEED //turn off truepos so apparent geocentric now
+        
+        //read swisseph documentation for more info
 ```
