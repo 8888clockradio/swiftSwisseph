@@ -4,7 +4,7 @@
  compile Framework, then include into your project.  
  interact in swift using c data type.  
  
- make sure you satisfy AstroDienst's licensing agenda satisfied.  
+ make sure you satisfy AstroDienst's licensing agenda to license the pre-req swisseph.    
  
  ```swift
  import swiftSwisseph
